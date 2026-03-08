@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-LOGFILE_PATH=~/enigma-bbs/logs/enigma-bbs.log
-BUNYAN_BINARY_PATH=~/enigma-bbs/node_modules/bunyan/bin/bunyan
+ENIGMA_INSTALL_DIR=${ENIGMA_INSTALL_DIR:=$HOME/enigma-bbs}
+
+LOGFILE_PATH=${ENIGMA_INSTALL_DIR}/logs/enigma-bbs.log
+BUNYAN_BINARY_PATH=${ENIGMA_INSTALL_DIR}/enigma-bbs/node_modules/bunyan/bin/bunyan
 
 PATH="$HOME/.local/share/mise/shims:$PATH"
 
