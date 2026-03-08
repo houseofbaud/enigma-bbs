@@ -2,7 +2,7 @@
 set -e
 
 # Set some vars
-PRE_POPULATED_VOLUMES=("config" "mods" "art") # These are folders which contain runtime needed files, and need to be represented in the host
+PRE_POPULATED_VOLUMES=("config" "mods" "art" "www") # These are folders which contain runtime needed files, and need to be represented in the host
 BBS_ROOT_DIR=/enigma-bbs # Install location
 BBS_STAGING_PATH=/enigma-bbs-pre # Staging location for pre populated volumes (PRE_POPULATED_VOLUMES)
 CONFIG_NAME=config.hjson # This is the default name, this script is intended for easy get-go - make changes as needed
