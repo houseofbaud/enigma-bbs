@@ -8,5 +8,7 @@ drop
 file_base
 logs
 mail
-docs/_site
-docs/.sass-cache
+docs/
+
+*.md
+mkdocs.yml
