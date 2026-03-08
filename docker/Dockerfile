@@ -1,3 +1,5 @@
+FROM --platform=${BUILDPLATFORM:-linux/amd64} node:20-bookworm-slim
+
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 ARG TARGETOS
