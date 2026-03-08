@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM:-linux/amd64} node:20-bookworm-slim
+FROM --platform=${BUILDPLATFORM:-linux/amd64} node:22-trixie-slim
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
@@ -17,6 +17,7 @@ RUN apt-get update && \
       curl \
       build-essential \
       python3 \
+      python3-setuptools \
       libssl-dev \
       lrzsz \
       arj \
@@ -56,7 +57,7 @@ RUN pm2 start main.js && \
     cp -rp config/* ../enigma-bbs-pre/config/ && \
     cp -rp www/* ../enigma-bbs-pre/www/
 
-RUN apt-get remove build-essential python3 libssl-dev git curl dos2unix -y && \
+RUN apt-get remove build-essential python3-setuptools libssl-dev git curl dos2unix -y && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get clean
