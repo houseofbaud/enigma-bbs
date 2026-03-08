@@ -6,7 +6,8 @@
     "license": "BSD-2-Clause",
     "bin": {
         "enigma-bbs": "./main.js",
-        "oputil": "./oputil.js"
+        "oputil": "./oputil.js",
+        "logwatch": "./watch.sh"
     },
     "scripts": {
         "start": "node main.js",
