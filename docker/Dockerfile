@@ -8,6 +8,8 @@ ARG TARGETBRANCH
 ENV NVM_DIR=/root/.nvm
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV ENIGMA_INSTALL_DIR=/enigma-bbs
+
 # Install APT and NPM packages
 RUN apt-get update && \
     apt-get install -y \
