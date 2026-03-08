@@ -80,7 +80,7 @@ fi
 
 # Start BBS
 log "Starting ENiGMA½"
-~/enigma-bbs/main.js
+$ENIGMA_INSTALL_DIR/main.js
 result=$?
 
 # Determine whether a Startup Crash Occurred
