@@ -1,0 +1,29 @@
+services:
+  enigma:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: enigma:latest
+    container_name: enigma_bbs
+    volumes:
+      - enigma_art:/enigma-bbs/art
+      - enigma_config:/enigma-bbs/config
+      - enigma_db:/enigma-bbs/db
+      - enigma_filebase:/enigma-bbs/filebase
+      - enigma_logs:/enigma-bbs/db
+      - enigma_mods:/enigma-bbs/mods
+      - enigma_www:/enigma-bbs/www
+      - enigma_mail:/mail
+    ports:
+      - 8888:8888
+    restart: unless-stopped
+
+volumes:
+  enigma_art:
+  enigma_config:
+  enigma_db:
+  enigma_filebase:
+  enigma_logs:
+  enigma_mods:
+  enigma_www:
+  enigma_mail:
